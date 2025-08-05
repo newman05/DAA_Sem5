@@ -1,30 +1,32 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
+using namespace std;
 
-using namespace std ; 
+#define kcod ios_base::sync_with_stdio(false); cin.tie(NULL);
 
-std::string decimalToBinary(int decimalNum) {
-    if (decimalNum == 0) {
-        return "0"; 
-    }
+vector<int> ans;
 
-    string binaryString = "";
-    while (decimalNum > 0) {
-        int remainder = decimalNum % 2;
-        binaryString += to_string(remainder);
-        decimalNum /= 2;
-    }
+void helper(int n) {
+    if (n == 0) return;
 
-    reverse(binaryString.begin(), binaryString.end()); 
-    return binaryString;
+    helper(n / 2);             
+    ans.push_back(n % 2);     
 }
 
 int main() {
-    int number;
-    cout << "Enter a decimal number: ";
-    cin >> number;
+    kcod;
 
-    string binaryResult = decimalToBinary(number);
-    cout << "The binary equivalent of " << number << " is: " << binaryResult << std::endl;
+    int n;
+    cin >> n;
+
+    if (n == 0) {
+        cout << "0" << endl;
+        return 0;
+    }
+
+    helper(n);
+
+    for (int bit : ans) cout << bit;
+    cout << endl;
 
     return 0;
 }
