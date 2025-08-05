@@ -15,7 +15,7 @@ void EXCHANGE(int &p, int &q) {
 }
 
 void ROTATE_RIGHT(int* p1, int p2) {
-    for (int i = p2 - 1; i > 0; --i) {
+    for (int i = p2 - 1; i > 0; i--) {
         EXCHANGE(p1[i], p1[i - 1]);
     }
 }
@@ -25,12 +25,12 @@ int main() {
     int A[n] = {11, 22, 33, 44, 55, 66, 77, 88, 99};
 
     cout<<"Before ROTATE: ";
-    for (int i = 0; i < n; ++i) cout<<A[i]<<" ";
+    for (int i = 0; i < n; i++) cout<<A[i]<<" ";
     cout<<endl;
 
     ROTATE_RIGHT(A, 5);  
     cout<<"After ROTATE: ";
-    for (int i = 0; i < n; ++i) cout<<A[i]<<" ";
+    for (int i = 0; i < n; i++) cout<<A[i]<<" ";
     cout<<endl;
 
     return 0;
