@@ -1,3 +1,6 @@
+/*2.1 Aim of the program: Write a program in C to convert the first ‘n’ decimal numbers of a disc
+file to binary using recursion. Store the binary value in a separate disc file.*/
+
 #include <bits/stdc++.h>
 using namespace std;
 
