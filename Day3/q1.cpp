@@ -57,7 +57,7 @@ int main()
     cin >> choice;
 
     vector<int> arr;
-    int n = 100;
+    int n = 1000;
     if (choice == 1)
     {
         arr.resize(n);
@@ -72,9 +72,10 @@ int main()
     else if (choice == 3)
     {
         arr.resize(n);
-        srand(time(0));
+        srand(time(0)); 
         for (int i = 0; i < n; i++)
             arr[i] = rand();
+            int ok = 0 ; 
     }
     else
         return 0;

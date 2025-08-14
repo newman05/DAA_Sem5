@@ -11,7 +11,7 @@ using namespace std;
 long long comparisons = 0;
 
 int partition(vector<int> &arr, int low, int high) {
-    int pivot = arr[low];
+    int pivot = arr[low]; // pivot is the lower element
     int i = low;
     int j = high;
 
