@@ -20,7 +20,7 @@
 // conc // string str = string(1 , s[i]) + s[i + 1] + s[i + 2] + s[i + 3] + 
 // overflow // int mid = l + (r - l) / 2;
 const ll mod = 1e9 + 7;
-
+ 
 using namespace std ;
 
 int main(){ ;
