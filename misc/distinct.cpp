@@ -30,6 +30,8 @@ kcod
 
 nv
 FOR
+
+// TC: O(n) and SC: O(n) approach
 // stt
 // int cnt = 0 ; 
 // co st.size() ed
@@ -38,6 +40,9 @@ FOR
 // }
 // cout<<nline ; 
 
+
+
+// TC: O(nlogn) and SC: O(1) approach
 sot
 
 int curr = v[0] ; 
@@ -53,29 +58,29 @@ for(int i = 1 ; i < n ; i++) {
     // co "why" ed 
   }
   else {
-    curr = v[i] ;
-    if(ok >= maxi ) {
-            // co "HI" ed
-            // co maxi ed 
-            // co ok ed 
+    curr = v[i];
+    if (ok >= maxi)
+    {
+      // co "HI" ed
+      // co maxi ed
+      // co ok ed
 
-        maxi = ok ;
-      mx = v[i - 1] ; 
-      
-    } 
-    ok = 1 ;
-    res.pb(curr) ; 
-    cnt++ ;  
+      maxi = ok;
+      mx = v[i - 1];
+    }
+    ok = 1;
+    res.pb(curr);
+    cnt++;
   }
 }
 
    if(ok >= maxi ) {
-            // co "HI" ed
-            // co maxi ed 
-            // co ok ed 
+     // co "HI" ed
+     // co maxi ed
+     // co ok ed
 
-        maxi = ok ;
-      mx = v[n - 1] ; 
+     maxi = ok;
+     mx = v[n - 1]; 
       
     } 
 
